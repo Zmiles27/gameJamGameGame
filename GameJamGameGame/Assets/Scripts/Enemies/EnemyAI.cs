@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public GameObject enemy;
+
     public int speed;
     public int minSpeed;
     public int maxSpeed;
@@ -15,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         startRoutine = true;
-        transform.position = new Vector3(0, 4, 0);
+        enemy.transform.position = new Vector3(0, 4, 0);
     }
     private void Update()
     {
@@ -37,16 +39,16 @@ public class EnemyAI : MonoBehaviour
         }
         
         // Moving
-        transform.position += new Vector3 (direction,0,0)  * speed * Time.deltaTime;
+        enemy.transform.position += new Vector3 (direction,0,0)  * speed * Time.deltaTime;
 
         // tp
-        if (transform.position.x > 9)
+        if (enemy.transform.position.x > 9)
         {
-            transform.position = new Vector3(-9, 4, 0);
+            enemy.transform.position = new Vector3(-9, 4, 0);
         }
-        if (transform.position.x < -9)
+        if (enemy.transform.position.x < -9)
         {
-            transform.position = new Vector3(9, 4, 0);
+            enemy.transform.position = new Vector3(9, 4, 0);
         }
     }
     IEnumerator waiter()
