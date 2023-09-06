@@ -10,6 +10,8 @@ public class shooting : MonoBehaviour
     public float size;
     public int bulletAmount;
     public int bulletPierce;
+
+    private bool canShoot = true;
     void Start()
     {
         
@@ -17,7 +19,7 @@ public class shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && canShoot)
         {
             shoot();
             StartCoroutine(fireTimer());
@@ -25,6 +27,7 @@ public class shooting : MonoBehaviour
     }
     void shoot()
     {
+        canShoot = false;
         var bullet = Instantiate(bulletPrefab);
         bullet.transform.position = transform.position;
         bullet.transform.rotation = transform.rotation;
@@ -33,5 +36,6 @@ public class shooting : MonoBehaviour
     IEnumerator fireTimer()
     {
         yield return new WaitForSeconds(1 / firerate);
+        canShoot = true;
     }
 }
