@@ -17,12 +17,12 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && transform.position.x < 7.5)
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, 0, -12);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (Input.GetKey(KeyCode.A) && transform.position.x > -7.5)
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, 0, 12);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
