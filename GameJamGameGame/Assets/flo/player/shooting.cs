@@ -45,7 +45,7 @@ public class shooting : MonoBehaviour
     }
     IEnumerator fireTimer()
     {
-        yield return new WaitForSeconds(1 / firerate);
+        yield return new WaitForSeconds(1/firerate);
         canShoot = true;
     }
 }

@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         startRoutine = true;
-        transform.position = new Vector3(0, 4, 0);
+        transform.position = new Vector3(Random.Range(-9,10), 4, 0);
     }
 
     private void Update()
