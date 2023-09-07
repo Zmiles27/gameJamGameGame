@@ -6,9 +6,11 @@ public class bulletScript : MonoBehaviour
 {
 
     public float speed;
+    public float size;
     void Start()
     {
         StartCoroutine(timer());
+        transform.localScale = new Vector3(size, size, size);
     }
 
     void Update()
