@@ -184,7 +184,7 @@ Transform:
   m_Children:
   - {fileID: 1612093318}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &104251706
 PrefabInstance:
@@ -384,7 +384,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844055477
 GameObject:
@@ -480,11 +480,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9f2b47fc592a84da0b01d8bc13aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   enemy: {fileID: 0}
   speed: 0
   minSpeed: 4
   maxSpeed: 8
   direction: 0
+=======
+  Enemy: {fileID: 1570369574424548962, guid: d1eef0ef3ecc12b458528bbaec1579e7, type: 3}
+>>>>>>> 12b1de977ed90cc7e64cde36ad49d0f51dcf8c4a
 --- !u!4 &1093243259
 Transform:
   m_ObjectHideFlags: 0
@@ -742,7 +746,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 451a0f544f52d2049b911e805f2e0764, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.767
   m_Pitch: 1
   Loop: 1
   Mute: 0

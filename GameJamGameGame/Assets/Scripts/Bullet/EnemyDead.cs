@@ -6,8 +6,10 @@ public class EnemyDead : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Bullet")
+        Debug.Log("test");
+        if (other.tag == "Enemy")
         {
+            Destroy(other.gameObject);
             Destroy(gameObject);
         }
     }
