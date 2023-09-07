@@ -228,6 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c3ef7ec5aed734cb0710f1f9977b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rateDrop: {fileID: 8844502289245217863, guid: 2620f57489150af42a0df5af88c0ab0f, type: 3}
+  sizeDrop: {fileID: 7052770149970543217, guid: 0d00385c2568b9e47af6f9e17b030514, type: 3}
+  speedDrop: {fileID: 1774681306650280259, guid: 0a2d1a2528fe2b649b998bfe0be5e587, type: 3}
 --- !u!50 &995782402366657446
 Rigidbody2D:
   serializedVersion: 4

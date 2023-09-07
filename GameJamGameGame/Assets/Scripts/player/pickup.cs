@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private shooting set;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("pickup" + collision.tag);
+        if(collision.tag == "rate")
+        {
+            Destroy(collision.gameObject);
+            set.rateUp++;
+        }
+        else if (collision.tag == "size")
+        {
+            Destroy(collision.gameObject);
+            set.sizeUp++;
+        }
+        else if (collision.tag == "speed")
+        {
+            Destroy(collision.gameObject);
+            set.speedUp++;
+        }
     }
 }
