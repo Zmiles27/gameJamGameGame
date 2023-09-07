@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  minSpeed: 3
-  maxSpeed: 6
+  minSpeed: 10
+  maxSpeed: 20
   direction: 0
 --- !u!114 &2103802036943577893
 MonoBehaviour:

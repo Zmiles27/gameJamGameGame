@@ -6,11 +6,11 @@ public class bulletScript : MonoBehaviour
 {
 
     public float speed;
-    public float size;
+    public Vector3 size;
     void Start()
     {
         StartCoroutine(timer());
-        transform.localScale = new Vector3(size, size, size);
+        transform.localScale = size;
     }
 
     void Update()
@@ -20,7 +20,7 @@ public class bulletScript : MonoBehaviour
     
     IEnumerator timer()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 
