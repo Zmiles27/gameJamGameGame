@@ -30,7 +30,6 @@ public class shooting : MonoBehaviour
         canShoot = false;
         var bullet = Instantiate(bulletPrefab);
         bullet.transform.position = transform.position;
-        bullet.transform.rotation = transform.rotation;
         
     }
     IEnumerator fireTimer()

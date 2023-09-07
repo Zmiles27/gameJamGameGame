@@ -18,15 +18,15 @@ public class bulletScript : MonoBehaviour
     
     IEnumerator timer()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(20);
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D colider)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (colider.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            Destroy(colider.gameObject);
             Destroy(gameObject);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class shootingEnemy : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyBulletPrefab;
+    public GameObject enemyBulletPrefab;
     public int ShootDelay;
     void Start()
     {
