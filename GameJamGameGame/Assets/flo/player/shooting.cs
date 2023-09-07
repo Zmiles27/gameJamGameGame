@@ -7,7 +7,7 @@ public class shooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     public float firerate;
     public float speed;
-    public float size;
+    public Vector3 size;
     public int bulletAmount;
     public int bulletPierce;
 
@@ -26,7 +26,7 @@ public class shooting : MonoBehaviour
     {
         firerate = (float)(rateUp / 2 + 1.50);
         speed = (float)(speedUp * 5 + 10);
-        size = (float)(sizeUp / 4 + 1);
+        size = new Vector3(0.2f, 0.6f, 1f) * (((float)sizeUp / 4) + 1) ;
         if (Input.GetKey(KeyCode.Space) && canShoot)
         {
             shoot();
@@ -39,13 +39,13 @@ public class shooting : MonoBehaviour
         var bullet = Instantiate(bulletPrefab);
         var bulletScript = bullet.GetComponent<bulletScript>();
         bulletScript.speed = speed;
+        bulletScript.size = size;
         bullet.transform.position = transform.position;
-        bullet.transform.rotation = transform.rotation;
         
     }
     IEnumerator fireTimer()
     {
-        yield return new WaitForSeconds(1 / firerate);
+        yield return new WaitForSeconds(1/firerate);
         canShoot = true;
     }
 }

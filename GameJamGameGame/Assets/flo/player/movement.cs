@@ -14,12 +14,12 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) && transform.position.x < 7.5)
+        if (Input.GetKey(KeyCode.D) && transform.position.x < 8.8)
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.A) && transform.position.x > -7.5)
+        else if (Input.GetKey(KeyCode.A) && transform.position.x > -8.8)
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);

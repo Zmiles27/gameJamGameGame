@@ -6,11 +6,11 @@ public class bulletScript : MonoBehaviour
 {
 
     public float speed;
-    public float size;
+    public Vector3 size;
     void Start()
     {
         StartCoroutine(timer());
-        transform.localScale = new Vector3(size, size, size);
+        transform.localScale = size;
     }
 
     void Update()
@@ -24,11 +24,11 @@ public class bulletScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D colider)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (colider.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            Destroy(colider.gameObject);
             Destroy(gameObject);
         }
     }

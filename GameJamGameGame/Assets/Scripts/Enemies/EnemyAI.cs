@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public GameObject Enemy;
 
-    private bool startRoutine = true;
+    private bool startRoutine;
 
     private void Start()
     {
@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator waiter()
     {
         Instantiate(Enemy, new Vector3(0, 4, 0), Quaternion.identity);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(2);
         startRoutine = true;
     }
 }
