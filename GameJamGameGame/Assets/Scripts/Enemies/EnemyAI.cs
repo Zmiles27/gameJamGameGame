@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator waiter()
     {
         Instantiate(Enemy, new Vector3(0, 4, 0), Quaternion.identity);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         startRoutine = true;
     }
 }
