@@ -480,15 +480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9f2b47fc592a84da0b01d8bc13aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   enemy: {fileID: 0}
   speed: 0
   minSpeed: 4
   maxSpeed: 8
   direction: 0
-=======
-  Enemy: {fileID: 1570369574424548962, guid: d1eef0ef3ecc12b458528bbaec1579e7, type: 3}
->>>>>>> 12b1de977ed90cc7e64cde36ad49d0f51dcf8c4a
 --- !u!4 &1093243259
 Transform:
   m_ObjectHideFlags: 0
