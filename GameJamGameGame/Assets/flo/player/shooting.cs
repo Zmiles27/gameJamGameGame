@@ -11,9 +11,9 @@ public class shooting : MonoBehaviour
     public int bulletAmount;
     public int bulletPierce;
 
-    [SerializeField] private int speedUp;
-    [SerializeField] private int rateUp;
-    [SerializeField] private int sizeUp;
+    public int speedUp;
+    public int rateUp;
+    public int sizeUp;
     
 
     private bool canShoot = true;
@@ -24,9 +24,9 @@ public class shooting : MonoBehaviour
 
     void Update()
     {
-        firerate = (float)(rateUp / 2 + 1.50);
-        speed = (float)(speedUp * 5 + 10);
-        size = new Vector3(0.2f, 0.6f, 1f) * (((float)sizeUp / 4) + 1) ;
+        firerate = (float)(rateUp + 1.50);
+        speed = (float)(speedUp * 10 + 10);
+        size = new Vector3(0.2f, 0.6f, 1f) * ((float)sizeUp + 1) ;
         if (Input.GetKey(KeyCode.Space) && canShoot)
         {
             shoot();
@@ -45,7 +45,7 @@ public class shooting : MonoBehaviour
     }
     IEnumerator fireTimer()
     {
-        yield return new WaitForSeconds(1 / firerate);
+        yield return new WaitForSeconds(1/firerate);
         canShoot = true;
     }
 }

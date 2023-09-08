@@ -30,8 +30,8 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator waiter()
     {
-        Instantiate(Enemy, new Vector3(9, 4, 0), Quaternion.identity);
-        yield return new WaitForSeconds(4);
+        Instantiate(Enemy, new Vector3(0, 4, 0), Quaternion.identity);
+        yield return new WaitForSeconds(2);
         startRoutine = true;
     }
 }
